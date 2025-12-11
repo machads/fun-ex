@@ -14,6 +14,10 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;700&display=swap"
         rel="stylesheet">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="services-carousel.css">
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mvv.css">
@@ -89,55 +93,88 @@
 
     <!-- Services Section -->
     <section id="services" class="section services">
-        <div class="container">
+        <div class="container" style="max-width: 1400px;">
             <div class="section-header center">
                 <span class="section-subtitle">Our Business</span>
                 <h2 class="section-title">事業内容</h2>
-                <p class="section-desc">幅広い領域で、楽しい体験とビジネスの成長をサポートします。</p>
+
             </div>
 
-            <div class="services-grid">
-                <!-- 1. Web制作 -->
-                <div class="service-card glass">
-                    <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3>Web制作</h3>
-                    <p>コーポレートサイトからLP制作まで。目的から最適なサイトを提案します。</p>
+            <!-- Swiper -->
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+                    <!-- 1. Web制作 -->
+                    <div class="swiper-slide">
+                        <div class="magic-card">
+                            <div class="magic-card-content">
+                                <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                <h3>Web制作</h3>
+                                <p>コーポレートサイトからLP制作まで。<br>目的から最適なサイトを提案します。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. SNSサポート -->
+                    <div class="swiper-slide">
+                        <div class="magic-card">
+                            <div class="magic-card-content">
+                                <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
+                                <h3>SNSサポート</h3>
+                                <p>あなたの目的に応じて、<br>最適なSNS運用を提案し、運用します。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. 企業DXサポート -->
+                    <div class="swiper-slide">
+                        <div class="magic-card">
+                            <div class="magic-card-content">
+                                <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <h3>企業DXサポート</h3>
+                                <p>あなたの会社のDXサポートをします。<br>DX化の提案からDX化まで行います。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 生成AI活用サポート -->
+                    <div class="swiper-slide">
+                        <div class="magic-card">
+                            <div class="magic-card-content">
+                                <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+                                <h3>生成AI活用サポート</h3>
+                                <p>生成AIを活用方法から<br>生成AIを活用した開発までサポートします。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. ゲーム制作/メタバース制作 -->
+                    <div class="swiper-slide">
+                        <div class="magic-card">
+                            <div class="magic-card-content">
+                                <div class="service-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                                <h3>ゲーム制作/メタバース</h3>
+                                <p>企業向けのゲーム制作をします。<br>新しい体験型の広告をサポートします。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. オフラインイベント -->
+                    <div class="swiper-slide">
+                        <div class="magic-card">
+                            <div class="magic-card-content">
+                                <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+                                <h3>オフラインイベント</h3>
+                                <p>ゲームやゲーム制作を活用したオフラインイベントを企画・運営することが可能です。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- 2. SNSサポート -->
-                <div class="service-card glass">
-                    <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
-                    <h3>SNSサポート</h3>
-                    <p>あなたの目的に応じて、最適なSNS運用を提案し、運用します。</p>
-                </div>
-
-                <!-- 3. 企業DXサポート -->
-                <div class="service-card glass">
-                    <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>企業DXサポート</h3>
-                    <p>あなたの会社のDXサポートをします。DX化の提案からDX化まで行います。</p>
-                </div>
-
-                <!-- 4. 生成AI活用サポート -->
-                <div class="service-card glass">
-                    <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
-                    <h3>生成AI活用サポート</h3>
-                    <p>生成AIを活用方法から生成AIを活用した開発までサポートします。</p>
-                </div>
-
-                <!-- 5. ゲーム制作/メタバース制作 -->
-                <div class="service-card glass">
-                    <div class="service-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
-                    <h3>ゲーム制作/メタバース制作</h3>
-                    <p>企業向けのゲーム制作をします。新しい体験型の広告をサポートします。</p>
-                </div>
-
-                <!-- 6. オフラインイベント -->
-                <div class="service-card glass">
-                    <div class="service-icon"><i class="fa-solid fa-users"></i></div>
-                    <h3>オフラインイベント</h3>
-                    <p>ゲームやゲーム制作を活用したオフラインイベントを企画・運営することが可能です。</p>
-                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -207,6 +244,9 @@
             &copy; 2025 FunEx Inc. All Rights Reserved.
         </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="hero-effect.js"></script>
     <script src="script.js"></script>

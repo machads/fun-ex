@@ -95,4 +95,34 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.style.visibility = 'hidden';
         }, 2200); // 1.4s (start) + 1s (fly) = ~2.4s max, but visual finish is earlier
     }
+
+    // Initialize Swiper
+    const swiper = new Swiper('.services-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        }
+    });
+
 });
