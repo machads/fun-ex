@@ -130,6 +130,11 @@ button {
     transform: translateY(-2px);
 }
 
+.btn-large {
+    padding: 18px 60px;
+    font-size: 1.3rem;
+}
+
 .w-full {
     width: 100%;
 }
@@ -761,15 +766,16 @@ button {
 }
 
 .news-desc a {
-    color: var(--primary);
-    /* Make links visible */
+    color: #3c67e3;
+    /* Link blue for better visibility */
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
     transition: all 0.2s;
 }
 
 .news-desc a:hover {
     text-decoration: underline;
+    opacity: 0.8;
 }
 
 /* Contact */
