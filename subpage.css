@@ -1,0 +1,109 @@
+/* Page Header (Sub-Page Hero) */
+.page-header {
+    background: var(--gradient-main);
+    padding: 240px 0 60px;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('assets/pattern.svg') repeat; Optional pattern */
+    opacity: 0.1;
+}
+
+.page-header .page-title {
+    font-family: var(--font-en);
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header .page-subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Company Profile Table */
+.company-profile {
+    position: relative;
+}
+
+.profile-table-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-table tr:last-child {
+    border-bottom: none;
+}
+
+.profile-table th {
+    background: #fafafa;
+    padding: 25px 30px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--text-muted);
+    width: 30%;
+    vertical-align: top;
+    font-size: 1rem;
+}
+
+.profile-table td {
+    padding: 25px 30px;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .page-header .page-title {
+        font-size: 2.5rem;
+    }
+
+    .profile-table th,
+    .profile-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .profile-table th {
+        background: transparent;
+        padding-bottom: 5px;
+        color: var(--primary);
+    }
+
+    .profile-table td {
+        padding-top: 5px;
+    }
+}
