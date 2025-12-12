@@ -52,8 +52,8 @@
     opacity: 0;
     transform: translate(-50%, -50%);
     animation: particleSmooth 1.5s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-delay: 2.25s;
-    /* Perfect sync with opacity drop */
+    animation-delay: 2.05s;
+    /* Start earlier for smoother morph */
 }
 
 @keyframes zoomUltraSmooth {
@@ -78,15 +78,15 @@
         animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
     }
 
-    95% {
+    85% {
         opacity: 1;
-        /* Stay visible until the very end */
+        /* Start fading out earlier */
     }
 
     100% {
         transform: translate(-50%, -50%) scale(4.0);
         opacity: 0;
-        /* Pop instantly */
+        /* Fade out completely */
     }
 }
 
