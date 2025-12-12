@@ -760,6 +760,18 @@ button {
     line-height: 1.6;
 }
 
+.news-desc a {
+    color: var(--primary);
+    /* Make links visible */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.news-desc a:hover {
+    text-decoration: underline;
+}
+
 /* Contact */
 .contact-card {
     display: grid;
