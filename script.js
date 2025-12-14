@@ -1,19 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    if (menuBtn) {
+    if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
             menuBtn.classList.toggle('active');
 
-            // Transform hamburger to X
-            const bars = menuBtn.querySelectorAll('.bar');
-            if (menuBtn.classList.contains('active')) {
-                // Add simple CSS manipulation for the icon or handle in CSS class
-                // For simplicity, we toggle a class and handle visuals in CSS
-            }
+            // Optional: Toggle body scroll lock
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            });
         });
     }
 

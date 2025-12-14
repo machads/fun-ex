@@ -1028,3 +1028,39 @@ button {
         /* But kept off-screen right: -100% until active */
     }
 }
+
+/* =========================================
+   Universal Design / Accessibility
+   ========================================= */
+
+/* High contrast focus ring for keyboard navigation */
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* Interactive elements cursor */
+.mobile-menu-btn {
+    cursor: pointer;
+}
+
+/* Ensure sufficient touch target size on mobile */
+@media (max-width: 768px) {
+
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    .mobile-menu-btn {
+        min-height: 44px;
+        /* WCAG guideline recommendation */
+        min-width: 44px;
+    }
+
+    .nav-links a,
+    .mobile-link {
+        padding: 10px;
+        /* Increase hit area */
+    }
+}
