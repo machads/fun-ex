@@ -126,5 +126,10 @@ function resize() {
     init(); // Re-initialize particles with new count and bounds
 }
 
-window.addEventListener('resize', resize);
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    // Debounce resize to prevent rapid firing on mobile scroll (address bar toggle)
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resize, 200);
+});
 resize();
