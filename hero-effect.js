@@ -112,8 +112,15 @@ animate();
 // Touch support to mimic mouse interaction
 
 
+let prevWidth = 0;
+
 function resize() {
-    width = canvas.width = canvas.parentElement.offsetWidth;
+    // Check if width has actually changed (ignore height changes due to mobile address bar)
+    const newWidth = canvas.parentElement.offsetWidth;
+    if (newWidth === prevWidth) return;
+
+    prevWidth = newWidth;
+    width = canvas.width = newWidth;
     height = canvas.height = canvas.parentElement.offsetHeight;
 
     // Adjust particle count for mobile
