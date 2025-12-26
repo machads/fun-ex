@@ -1,0 +1,12 @@
+/* Minimal global styles for Next.js - use existing style.css for main styling */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --primary: #0066cc;
+  --primary-hover: #0052a3;
+}
+
+/* Let existing style.css handle body styles */
